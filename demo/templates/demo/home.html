@@ -1,0 +1,40 @@
+{% extends "ditto/home.html" %}
+
+{# Uses the standard Ditto home page, but overriding a few blocks. #}
+
+
+{% block head_site_title %}Ditto Demo{% endblock %}
+
+{% block navbar_title %}Ditto Demo{% endblock %}
+
+
+{% block home_banner_title_content %}
+	Ditto Demo
+{% endblock home_banner_title_content %}
+
+
+{% block home_banner_tagline_content %}
+	<p>This is a demonstration of Ditto, a set of Django apps for aggregating photos, tweets, etc from other services.</p>
+{% endblock home_banner_tagline_content %}
+
+
+{% block home_sidebar_content %}
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">Django Ditto</h4>
+			<p class="card-text">
+				Ditto is a set of apps for use with the <a href="https://www.djangoproject.com">Django framework</a>. It enables the fetching of your photos from Flickr, Tweets and Likes from Twitter, and bookmarks from Pinboard.
+			</p>
+			<p class="card-text">
+				This website is a demonstration, using Ditto’s own views and templates.
+			</p>
+		</div>
+		<ul class="list-group list-group-flush">
+			<li class="list-group-item"><a href="https://github.com/philgyford/django-ditto">Django Ditto on GitHub</a></li>
+			<li class="list-group-item"><a href="http://django-ditto.readthedocs.io/en/latest/">Documentation</a></li>
+			<li class="list-group-item"><a href="https://pypi.python.org/pypi/django-ditto">Module on PyPi</a></li>
+			<li class="list-group-item"><a href="https://github.com/philgyford/django-ditto-demo">This website on GitHub</a></li>
+			<li class="list-group-item"><a href="mailto:phil@gyford.com">Email Phil Gyford</a></li>
+		</ul>
+	</div>
+{% endblock home_sidebar_content %}

@@ -19,10 +19,5 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
 
-    url(r'^flickr/', include('ditto.flickr.urls', namespace='flickr')),
-    url(r'^pinboard/', include('ditto.pinboard.urls', namespace='pinboard')),
-    url(r'^twitter/', include('ditto.twitter.urls', namespace='twitter')),
-
-    # To include the overall, aggregated views:
-    url(r'', include('ditto.core.urls', namespace='ditto')),
+    url(r'^', include('demo.urls')),
 ]

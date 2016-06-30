@@ -41,6 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Our Django app.
+    'demo',
+
+    # For Django Ditto.
     'imagekit',
     'sortedm2m',
     'taggit',
