@@ -1,6 +1,6 @@
 Django==1.9.7
 django-debug-toolbar
-django-ditto==0.2.5
+django-ditto==0.2.7
 gunicorn
 psycopg2
 pylibmc
