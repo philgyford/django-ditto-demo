@@ -1,0 +1,17 @@
+SHELL=/bin/bash
+MAILTO=”phil@gyford.com”
+APP_ENV=/home/deploy/.pyenv/versions/dittodemo
+APP_HOME=/webapps/dittodemo
+LOGFILE=/var/log/cron/dittodemo.log
+
+#10 4 * * * deploy source $APP_HOME/.env && $APP_HOME/backup_db.sh >> $LOGFILE 2>&1
+
+1,16,31,46 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_flickr_photos --days=2 >> $LOGFILE 2>&1
+
+3,18,33,48 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_pinboard_bookmarks --recent=20 >> $LOGFILE 2>&1
+
+5,20,35,50 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_twitter_tweets --recent=100 >> $LOGFILE 2>&1
+
+7,22,37,52 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_twitter_favorites --recent=100 >> $LOGFILE 2>&1
+
+
