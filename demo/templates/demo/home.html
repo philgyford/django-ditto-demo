@@ -2,6 +2,10 @@
 
 {# Uses the standard Ditto home page, but overriding a few blocks. #}
 
+{% block head_title %}Django Ditto Demo{% endblock %}
+
+{% block home_banner_title_content %}Django Ditto Demo{% endblock %}
+
 
 {% block home_banner_tagline_content %}
 	<p>This is a demonstration of Django Ditto, a set of Django apps for aggregating photos, tweets, etc from other services.</p>
@@ -13,7 +17,7 @@
 		<div class="card-block">
 			<h4 class="card-title">Django Ditto</h4>
 			<p class="card-text">
-				Ditto is a set of apps for use with the <a href="https://www.djangoproject.com">Django framework</a>. It enables the fetching of your photos from Flickr, Tweets and Likes from Twitter, and bookmarks from Pinboard.
+				Django Ditto is a set of apps for use with the <a href="https://www.djangoproject.com">Django framework</a>. It enables the fetching of your photos from Flickr, Tweets and Likes from Twitter, and bookmarks from Pinboard.
 			</p>
 			<p class="card-text">
 				This website is a demonstration, using Django Ditto’s own views and templates.
