@@ -8,6 +8,8 @@ LOGFILE=/var/log/cron/dittodemo.log
 
 1,16,31,46 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_flickr_photos --days=2 >> $LOGFILE 2>&1
 
+9,24,39,54 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_lastfm_scrobbles --days=7 >> $LOGFILE 2>&1
+
 3,18,33,48 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_pinboard_bookmarks --recent=20 >> $LOGFILE 2>&1
 
 5,20,35,50 * * * * deploy source $APP_HOME/.env && $APP_ENV/bin/python $APP_HOME/manage.py fetch_twitter_tweets --recent=100 >> $LOGFILE 2>&1
